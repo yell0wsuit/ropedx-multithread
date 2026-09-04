@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <script src="./coi.js"></script>
 
         <!-- Resolves to the directory this page is served from, so the app works from a domain
              root and from a GitHub Pages project subpath alike. It lives here rather than being
@@ -261,6 +262,14 @@
             <p id="splash-hint" role="status" hidden>
                 Taking too long? You might want to check your internet speed, or
                 reload the page.
+            </p>
+            <p id="isolation-error" hidden>
+                This build needs cross-origin isolation, which this page did not get. Reload
+                once; if it keeps happening, the server is not sending the COOP and COEP
+                headers the game requires.
+            </p>
+            <p id="context-lost-error" role="alert" hidden>
+                The graphics context was lost. Reload this page to restart the game.
             </p>
         </div>
         <dialog id="update">

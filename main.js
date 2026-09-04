@@ -1,6 +1,23 @@
-import { dotnet } from "./_framework/dotnet.js";
+import * as hostEvents from "./host-events.js";
 import { setLoadingProgress } from "./loading-progress.js";
 
+await globalThis.ctrdxIsolationReady;
+const isolated = globalThis.crossOriginIsolated === true;
+console.info(`ctrdx-wasm-env: crossOriginIsolated=${isolated}`);
+if (!isolated) {
+    // Threaded-only: there is no browser-thread rendering path to degrade to, and
+    // the canvas transfer this build depends on cannot be undone once it happens.
+    console.error(
+        "ctrdx-isolation-error: refusing to start without shared memory",
+    );
+    document.getElementById("splash-spinner")?.setAttribute("hidden", "");
+    document.getElementById("isolation-error")?.removeAttribute("hidden");
+    throw new Error("Cross-origin isolation is required.");
+}
+
+// Importing the threaded runtime itself requires SharedArrayBuffer, so the
+// isolation guard must run before this module is evaluated.
+const { dotnet } = await import("./_framework/dotnet.js");
 const reportDownloadProgress = (loaded, total) => {
     setLoadingProgress("runtime", loaded, total);
 };
@@ -22,10 +39,7 @@ const config = runtime.getConfig();
 globalThis.ctrdxWasmModule = runtime.Module;
 await runtime.runMain(config.mainAssemblyName, []);
 
-const exports = await runtime.getAssemblyExports(config.mainAssemblyName);
 const canvas = document.getElementById("game");
-const input = exports.CutTheRopeDX.Browser.InputRouter;
-const loop = exports.CutTheRopeDX.Browser.GameLoop;
 
 // getBoundingClientRect forces the browser to settle layout before it answers, and a drag
 // asks once per pointermove. The rectangle only moves when the canvas box does, so it is
@@ -41,21 +55,17 @@ globalThis.addEventListener("scroll", invalidateCanvasRect, {
     passive: true,
 });
 
-const toBacking = (event) => {
-    canvasRect ??= canvas.getBoundingClientRect();
-    const rect = canvasRect;
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-    return [
-        (event.clientX - rect.left) * scaleX,
-        (event.clientY - rect.top) * scaleY,
-    ];
-};
-
 const sendPointer = (event, phase) => {
     event.preventDefault();
-    const [x, y] = toBacking(event);
-    input.OnPointer(x, y, phase);
+    canvasRect ??= canvas.getBoundingClientRect();
+    const rect = canvasRect;
+    hostEvents.pointer(
+        phase,
+        event.clientX - rect.left,
+        event.clientY - rect.top,
+        rect.width,
+        rect.height,
+    );
 };
 
 canvas.addEventListener("pointerdown", (event) => {
@@ -90,19 +100,18 @@ canvas.addEventListener(
             (-event.deltaY * scale * UNITS_PER_NOTCH) / PIXELS_PER_NOTCH;
         const rounded = Math.round(units);
         if (rounded !== 0) {
-            input.OnWheel(rounded);
+            hostEvents.wheel(rounded);
         }
     },
     // preventDefault needs a non-passive listener, which wheel handlers default to.
     { passive: false },
 );
 
-const RESERVED_KEYS = new Set(["Space", "ArrowLeft", "ArrowRight"]);
 const sendKey = (event, down) => {
-    if (RESERVED_KEYS.has(event.code)) {
+    if (hostEvents.reservedKey(event.code)) {
         event.preventDefault();
     }
-    input.OnKey(event.code, down);
+    hostEvents.key(event.code, down);
 };
 globalThis.addEventListener("keydown", (event) => sendKey(event, true));
 globalThis.addEventListener("keyup", (event) => sendKey(event, false));
@@ -111,7 +120,7 @@ globalThis.addEventListener("keyup", (event) => sendKey(event, false));
 // tab stops getting animation frames but keeps its audio, while a window merely pushed
 // behind another stays visible and keeps ticking at full speed.
 const syncActive = () =>
-    loop.SetActive(
+    hostEvents.active(
         document.visibilityState === "visible" && document.hasFocus(),
     );
 globalThis.addEventListener("focus", syncActive);
@@ -119,19 +128,5 @@ globalThis.addEventListener("blur", syncActive);
 document.addEventListener("visibilitychange", syncActive);
 syncActive();
 
-// Pausing already flushes the save, but a page can be discarded without ever going
-// inactive first.
-globalThis.addEventListener("pagehide", () => loop.Flush());
-
-let started = false;
-const frame = (timestamp) => {
-    loop.Tick(timestamp);
-    requestAnimationFrame(frame);
-};
-globalThis.ctrdxStart = () => {
-    if (!started) {
-        started = true;
-        requestAnimationFrame(frame);
-    }
-};
+globalThis.ctrdxStart = () => {};
 globalThis.ctrdxReady?.();

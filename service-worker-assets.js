@@ -1,13 +1,13 @@
 self.assetsManifest = {
-  "version": "0UihaQO/",
+  "version": "cQ5NSnJ6",
   "assets": [
     {
-      "hash": "sha256-TZXvgpVtywMUxHLYxhx9aS385t+7f4Gdf8cMD40rA0U=",
-      "url": "_framework/CutTheRopeDX.Browser.5aq5hozdwk.wasm"
+      "hash": "sha256-pbCD8E+1WygBrIeRTcW/J4OGbbs4D3R17n8mx1sA8bk=",
+      "url": "_framework/CutTheRopeDX.Browser.x987rk8lis.wasm"
     },
     {
-      "hash": "sha256-FQgSoCYGnOONew2zOBSYYGUQRmwyyZgflv7tgZCgfGo=",
-      "url": "_framework/CutTheRopeDX.Core.ror3heieky.wasm"
+      "hash": "sha256-B+DboC/5jXksNYzS2vf11aVZ0/MVAYD1NcjKGeENkM0=",
+      "url": "_framework/CutTheRopeDX.Core.fah6z4757t.wasm"
     },
     {
       "hash": "sha256-nDXXE8vQHYzkiWytgorH7k6KKRaTjfdVtQYiPFEvfqs=",
@@ -122,12 +122,12 @@ self.assetsManifest = {
       "url": "_framework/System.yaqwpv2ics.wasm"
     },
     {
-      "hash": "sha256-3KW5Kp1TPswMtxMdj9ZyL5wBj16UZETyKgat2lVGEG0=",
+      "hash": "sha256-A9+JE2lIFPo6DydbAgB2+PlG7CGpeTnqdZomVd02SHQ=",
       "url": "_framework/dotnet.js"
     },
     {
-      "hash": "sha256-cKcfFVZc/ckejNyGuoEH8z5alVlHxNc8crE9DUnJLZc=",
-      "url": "_framework/dotnet.native.oey5q8765m.wasm"
+      "hash": "sha256-NCUOzQS7f7z4qGLPp1TGBJBRvX3sntIAzWq2EuBqYvc=",
+      "url": "_framework/dotnet.native.42og1rhcq2.wasm"
     },
     {
       "hash": "sha256-PP+8ZQw2L356DAD8SmlKsMlS8BCzkjITFCTO1ileW60=",
@@ -150,7 +150,7 @@ self.assetsManifest = {
       "url": "coi-sw.LICENSE.txt"
     },
     {
-      "hash": "sha256-kC4+elQpGa+ltvFk7BxvTtkVR9eujtQkqPj/Qau0/pg=",
+      "hash": "sha256-05I1DBZPC6WK6OncqfAiAv+cMnrKMl1rIjbuQJ2QKnA=",
       "url": "coi.js"
     },
     {
@@ -1806,7 +1806,7 @@ self.assetsManifest = {
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-pLK17nVSvCe1eOY/LXML6QfgCyX6hTSYLqECeHfXlIk=",
+      "hash": "sha256-RZHUPNjBEkIEMCmTPMVCs1luoBDxCO7oyh+Z7W8XAlE=",
       "url": "index.html"
     },
     {
@@ -1830,7 +1830,7 @@ self.assetsManifest = {
       "url": "playtest.js"
     },
     {
-      "hash": "sha256-sveCh648r3B2cuobzVDqPhilykvnHY3Cg8hsSwUddsg=",
+      "hash": "sha256-URwrnOlIlGwP0bCnPdYzk87mMWi9AborFb3g/tNU1nc=",
       "url": "pwa.js"
     },
     {

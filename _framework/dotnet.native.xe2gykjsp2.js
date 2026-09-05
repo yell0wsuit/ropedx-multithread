@@ -599,7 +599,7 @@ function createWasm() {
 }
 
 var ASM_CONSTS = {
- 3602808: () => {
+ 3602824: () => {
   var token = (globalThis.ctrdxFrameToken | 0) + 1;
   globalThis.ctrdxFrameToken = token;
   requestAnimationFrame(function(timestamp) {
@@ -609,7 +609,7 @@ var ASM_CONSTS = {
    _ctrdx_frame_entry(timestamp);
   });
  },
- 3603032: () => {
+ 3603048: () => {
   if (globalThis.ctrdxCanvasListener) {
    return 1;
   }
@@ -626,8 +626,8 @@ var ASM_CONSTS = {
   });
   return 1;
  },
- 3603476: () => globalThis.ctrdxCanvas ? 1 : 0,
- 3603519: ($0, $1) => {
+ 3603492: () => globalThis.ctrdxCanvas ? 1 : 0,
+ 3603535: ($0, $1) => {
   var surface = globalThis.ctrdxCanvas;
   if (!surface) {
    return 0;
@@ -670,7 +670,7 @@ var ASM_CONSTS = {
   });
   return handle;
  },
- 3604295: ($0, $1) => {
+ 3604311: ($0, $1) => {
   var surface = globalThis.ctrdxCanvas;
   if (!surface) {
    return 0;
@@ -679,7 +679,7 @@ var ASM_CONSTS = {
   surface.height = $1;
   return 1;
  },
- 3604416: () => globalThis.ctrdxContextLost | 0
+ 3604432: () => globalThis.ctrdxContextLost | 0
 };
 
 /** @constructor */ function ExitStatus(status) {

@@ -1,13 +1,13 @@
 self.assetsManifest = {
-  "version": "QkeMKXFV",
+  "version": "gyHWEzU+",
   "assets": [
     {
-      "hash": "sha256-w1gpCEzYmRGwUGF1aczBVRAIKTVjb0cQPK4MZOZ4V1U=",
-      "url": "_framework/CutTheRopeDX.Browser.l654gp6p9a.wasm"
+      "hash": "sha256-BtqAbWZKqvRuDZKrbMoYoRQGByW5K4SyqgqbIKowm6I=",
+      "url": "_framework/CutTheRopeDX.Browser.ihp0trli1v.wasm"
     },
     {
-      "hash": "sha256-QIaQcnMpXadTIJFZKZAWIi9LGcVrVu8nMXxq3N0EgKM=",
-      "url": "_framework/CutTheRopeDX.Core.47onkeu9eu.wasm"
+      "hash": "sha256-JNkIl/KTDbQ1/8pb+U5wmra1neAruuajN7RCfiBMrbo=",
+      "url": "_framework/CutTheRopeDX.Core.09yv2e2nk8.wasm"
     },
     {
       "hash": "sha256-nDXXE8vQHYzkiWytgorH7k6KKRaTjfdVtQYiPFEvfqs=",
@@ -122,20 +122,20 @@ self.assetsManifest = {
       "url": "_framework/System.yaqwpv2ics.wasm"
     },
     {
-      "hash": "sha256-BRQ2O04ex3OJ4kT0ErQUZTMKjnUIrpk6BUEblEV2k/I=",
+      "hash": "sha256-uw9VA0nAb6y6Q+YpiVsAu5Nv02TsLjdX9qWQHKdS/sE=",
       "url": "_framework/dotnet.js"
     },
     {
-      "hash": "sha256-68uMF1Wj0VMRxWKywfCIqyp4xS16zvWEXU0tD540znI=",
-      "url": "_framework/dotnet.native.fzjzwrtpnk.wasm"
+      "hash": "sha256-lqOmGIh4lNRTNEFhPQPUc5HKv3lObSyxuQLuYe53EJY=",
+      "url": "_framework/dotnet.native.qjh34t5jjz.js"
+    },
+    {
+      "hash": "sha256-wKBKx1ivvhWG7/Z49TGvS9OKiKgUe5B2thqkVrmsJ6g=",
+      "url": "_framework/dotnet.native.stthe0i3cz.wasm"
     },
     {
       "hash": "sha256-PP+8ZQw2L356DAD8SmlKsMlS8BCzkjITFCTO1ileW60=",
       "url": "_framework/dotnet.native.worker.8duaz980cg.mjs"
-    },
-    {
-      "hash": "sha256-OdIl7Hfkb/I7im9XXPkjtD8nOTNTNnnNgRb3fVrmS7g=",
-      "url": "_framework/dotnet.native.xe2gykjsp2.js"
     },
     {
       "hash": "sha256-CQvNhr+07+1gRcSbVd1Mi0ldcVUR6dhKUzpOKHAET/4=",
@@ -1798,7 +1798,7 @@ self.assetsManifest = {
       "url": "glcontext.js"
     },
     {
-      "hash": "sha256-rG4JmTxMV3Ja5gaRJ0EPJZQQjqzNcEKVn95hGD4X1A4=",
+      "hash": "sha256-pqtUyyKQRj7c4YQ/MJ9Njd9I4P7dArGWnc2CiH69h1U=",
       "url": "host-events.js"
     },
     {
@@ -1814,7 +1814,7 @@ self.assetsManifest = {
       "url": "loading-progress.js"
     },
     {
-      "hash": "sha256-XJ3HcxR5nm1JrYIC101iRH+VzvlXFfFk/zL1PYEEMwo=",
+      "hash": "sha256-E4Ecw6+kQ+JtSbfk43w3tlcXGRG8EiUpWagAFfOD8Mg=",
       "url": "main.js"
     },
     {

@@ -1,4 +1,4 @@
-/* Manifest version: cQ5NSnJ6 */
+/* Manifest version: QkeMKXFV */
 // Offline cache for the published game. Cross-origin isolation handling is
 // adapted from https://github.com/yell0wsuit/coi-sw under the MIT License; see
 // coi-sw.LICENSE.txt.

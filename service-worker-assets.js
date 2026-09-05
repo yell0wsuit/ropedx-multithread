@@ -1,17 +1,17 @@
 self.assetsManifest = {
-  "version": "9xz38cil",
+  "version": "KIFGWGhf",
   "assets": [
     {
-      "hash": "sha256-GuUldzYhH9hGQC8DO3mz7EpwC9fr+Rbki9JuTxV3te8=",
-      "url": "_framework/CutTheRopeDX.Browser.2ip0s2wmzp.wasm"
+      "hash": "sha256-ZHaeg069x3FTSYC46GVWI+dXrvBoKftfkw+feOPUPT0=",
+      "url": "_framework/CutTheRopeDX.Browser.wx61t0ilcs.wasm"
     },
     {
-      "hash": "sha256-L1s3Sx58vOekWbHIiIenq9hKp3Mx8A24vG8mPz9rlo8=",
-      "url": "_framework/CutTheRopeDX.Core.dtroe1ltwn.wasm"
+      "hash": "sha256-djDxfcH9A6sODJsrd85LFMV8nZb3/gdAMmBCujWy4nk=",
+      "url": "_framework/CutTheRopeDX.Core.emlkms0fbx.wasm"
     },
     {
-      "hash": "sha256-mwJErO0eneTJAu98gzmxjE915puWoLUTZ4mjZfZGv+w=",
-      "url": "_framework/SkiaSharp.texhya3xas.wasm"
+      "hash": "sha256-nDXXE8vQHYzkiWytgorH7k6KKRaTjfdVtQYiPFEvfqs=",
+      "url": "_framework/SkiaSharp.sikyi3r12f.wasm"
     },
     {
       "hash": "sha256-D/O6LevAwvPkPMvLgeR5AEKXPRsAr6gZNYGzXsRrgy4=",
@@ -122,20 +122,20 @@ self.assetsManifest = {
       "url": "_framework/System.yaqwpv2ics.wasm"
     },
     {
-      "hash": "sha256-4BdvcILs/W/at5vMBXxFSLY5InJMmVLb8vLBeOSA804=",
+      "hash": "sha256-aLOtr6/RLpaSuMZi4x780Nyg8rSSb76dxIxMqgv04Nc=",
       "url": "_framework/dotnet.js"
     },
     {
-      "hash": "sha256-mQJ4hG0Pqk/i9z3AjODHrmTU6NA1DsEwOX95xLQToxQ=",
-      "url": "_framework/dotnet.native.3x8xywrnem.js"
+      "hash": "sha256-kUtFVfQuJTtYOjgphVTnmFhuBixszufS35E4kiUyTyA=",
+      "url": "_framework/dotnet.native.5fjtgdqdjy.js"
+    },
+    {
+      "hash": "sha256-3Nv1chTd5DbZ43WMJ7Hpv5GtIlPZoDp/xRGApkG6TYA=",
+      "url": "_framework/dotnet.native.ksudv2czdb.wasm"
     },
     {
       "hash": "sha256-PP+8ZQw2L356DAD8SmlKsMlS8BCzkjITFCTO1ileW60=",
       "url": "_framework/dotnet.native.worker.8duaz980cg.mjs"
-    },
-    {
-      "hash": "sha256-G3jp5JaIrVjrYoUvmr2/TnjxWn9GEcuw7L3sI0Qop8o=",
-      "url": "_framework/dotnet.native.x90qcq5ayg.wasm"
     },
     {
       "hash": "sha256-CQvNhr+07+1gRcSbVd1Mi0ldcVUR6dhKUzpOKHAET/4=",
